@@ -1,9 +1,7 @@
 {
-    "cSpell.ignoreWords": [
-        "runlength"
-    ],
     "cSpell.words": [
         "dyndep",
-        "nihtest"
+        "nihtest",
+        "runlength",
     ]
 }

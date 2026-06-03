@@ -1,2 +1,4 @@
+.DS_Store
 run*
 __pycache__
+/.cache
