@@ -1,0 +1,54 @@
+program convert-screens
+arguments -o test.s test.txt
+return 0
+
+file test.txt <>
+map '@'-'_' $00
+map 'a'-'z' $01
+map ' '-'?' $20
+name test_screens
+line_length 16
+lines 3
+runlength_encode no
+---
+Screen 1 has
+only two lines.
+---
+Screen 2 has
+all three
+lines.
+end-of-inline-data
+
+file test.s {} <>
+; This file is automatically created by convert-screens from test.txt.
+; Do not edit.
+
+.section data
+
+test_screens_count {
+    .data 2
+}
+
+test_screens {
+    .data test_screens_0:2
+    .data test_screens_1:2
+}
+
+test_screens_0 {
+    .data $13, $03, $12, $05, $05, $0e, $20, $31
+    .data $20, $08, $01, $13, $20, $20, $20, $20
+    .data $0f, $0e, $0c, $19, $20, $14, $17, $0f
+    .data $20, $0c, $09, $0e, $05, $13, $2e, $20
+    .data $20, $20, $20, $20, $20, $20, $20, $20
+    .data $20, $20, $20, $20, $20, $20, $20, $20
+}
+
+test_screens_1 {
+    .data $13, $03, $12, $05, $05, $0e, $20, $32
+    .data $20, $08, $01, $13, $20, $20, $20, $20
+    .data $01, $0c, $0c, $20, $14, $08, $12, $05
+    .data $05, $20, $20, $20, $20, $20, $20, $20
+    .data $0c, $09, $0e, $05, $13, $2e, $20, $20
+    .data $20, $20, $20, $20, $20, $20, $20, $20
+}
+end-of-inline-data
