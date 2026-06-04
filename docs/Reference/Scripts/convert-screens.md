@@ -50,16 +50,16 @@ The text file starts with a preamble, specifying how the conversion should be do
 : (default: empty)
 
 <code>line_length <em>number</em></code>
-: (default: 40)
+: The length of a screen line. (default: 40)
 
 <code>line_skip <em>number</em></code>
 : (default: 0)
 
 <code>lines <em>number</em></code>
-: (default: 25)
+: The number of lines on a screen. (default: 25)
 
-<code>map <em>from</em>[-<em>to</em>] <em>target</em></code>
-:
+<code>map <em>from</em>\[-<em>to</em>\] <em>target</em></code>
+: Map unicode character `from` to screen code `target`. If `to` is given, map all characters from `from` to `to` to consecutive screen codes starting with `target`.
 
 <code>name <em>string</em></code>
 : (required)
